@@ -24,7 +24,8 @@ jobs:
         runs-on: ubuntu-latest
         name: TestFInal
         # if: startsWith('v', github.event.head_commit.message)
-        if: github.ref =='refs/heads/master' && startsWith('v', github.event.head_commit.message) && endsWith('release', github.event.head_commit.message) && github.event_name!='pull_request'
+        # if: github.ref =='refs/heads/master' && startsWith('v', github.event.head_commit.message) && endsWith('release', github.event.head_commit.message) && github.event_name!='pull_request'
+        if: github.event.head_commit.message=='test6'
         steps:
             - uses: actions/checkout@v2
             - name: Set up Python
