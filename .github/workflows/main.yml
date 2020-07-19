@@ -6,7 +6,7 @@ jobs:
     publish_pypi:
         runs-on: ubuntu-latest
         name: Publish to pypi
-        if: github.ref =='refs/heads/master' && startsWith('v', github.event.head_commit.message)
+        if: startsWith('v', github.event.head_commit.message)
         #if: github.ref =='refs/heads/master' && startsWith('v', github.event.head_commit.message) && endsWith('release', github.event.head_commit.message) && github.event_name!='pull_request'
         steps:
             - uses: actions/checkout@v2
