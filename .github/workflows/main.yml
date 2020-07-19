@@ -15,8 +15,10 @@ jobs:
             - name: Test
               env:
                   GITHUB_CONTEXT: ${{ toJson(github) }}
+                  MESSAGE: ${{github.event.head_commit}}
               run: |
                   echo "$GITHUB_CONTEXT"
+                  echo "$MESSAGE"
 
     publish_pypi:
         runs-on: ubuntu-latest
