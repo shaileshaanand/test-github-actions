@@ -16,4 +16,4 @@ jobs:
                   python-version: "3.8"
             - name: Test
               run: |
-                  echo $GITHUB_EVENT
+                  echo $GITHUB_CONTEXT
